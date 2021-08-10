@@ -1,0 +1,1 @@
+cmd_/home/igor/eltex/5case/keyboard_mod/keyboard.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/igor/eltex/5case/keyboard_mod/keyboard.ko /home/igor/eltex/5case/keyboard_mod/keyboard.o /home/igor/eltex/5case/keyboard_mod/keyboard.mod.o;  true

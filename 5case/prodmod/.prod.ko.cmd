@@ -1,0 +1,1 @@
+cmd_/home/igor/eltex/5case/prodmod/prod.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/igor/eltex/5case/prodmod/prod.ko /home/igor/eltex/5case/prodmod/prod.o /home/igor/eltex/5case/prodmod/prod.mod.o;  true

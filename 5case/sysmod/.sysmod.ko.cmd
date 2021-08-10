@@ -1,0 +1,1 @@
+cmd_/home/igor/eltex/5case/sysmod/sysmod.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/igor/eltex/5case/sysmod/sysmod.ko /home/igor/eltex/5case/sysmod/sysmod.o /home/igor/eltex/5case/sysmod/sysmod.mod.o;  true
