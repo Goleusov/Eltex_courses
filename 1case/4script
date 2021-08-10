@@ -1,0 +1,39 @@
+#!/bin/bash
+echo "Введите имя процесса и периодичность проверки в минутах"
+#read proc
+proc="while"
+#read time
+
+if  ps | grep -w "$proc">/dev/null
+then
+pid=$( ps | grep -w "$proc" | cut -f 1 -d " "  | cut -f 1 -d " ")
+if [[ -z $pid ]]
+then 
+pid=$(ps | grep -w "$proc" | cut -c 2- | cut -f 1 -d " ")
+fi
+fi
+link=$(pwd /proc/$pid/cwd)
+
+while true
+do
+#read o
+if  ps | grep -w "$proc">/dev/null
+then
+#sleep (($time*60))
+sleep 7
+else
+$($link/$proc) &
+echo "зaпустили заного"
+fi
+
+done
+
+
+
+
+
+
+
+
+
+

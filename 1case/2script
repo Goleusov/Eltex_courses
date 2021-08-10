@@ -1,0 +1,67 @@
+#!/bin/bash
+
+function mk_dir(){
+local numdir=$1
+local numdirdir=$2
+local numfile=$3
+
+mkdir scriptdir
+cd scriptdir
+for((i=1;i<=numdir;i++))
+do
+mkdir $4$i
+cd $4$i
+
+for((j=1;j<=numdirdir;j++))
+do
+mkdir $5$j
+cd $5$j
+
+for((k=1;k<=numfile;k++))
+do
+touch $6$k
+done
+cd ..
+
+done
+cd ..
+
+done
+}
+
+
+
+echo "Введите путь для работы скрипта"
+read d
+if [[ -e $d ]]
+then
+cd $d
+else echo "нет такого каталога - \"$d\""
+exit
+fi
+echo "Введите количество и шаблон имени папок"
+read n
+read name
+echo "Введите количество и шаблон имени подпапок"
+read nn
+read nname
+echo "Введите количество и шаблон имени файлов"
+read nnn
+read nnname
+
+mk_dir $n $nn $nnn $name $nname $nnname
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
